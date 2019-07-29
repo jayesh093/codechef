@@ -1,33 +1,26 @@
-
 #include<iostream>
-#include<algorithm>
+#include<string.h>
 using namespace std;
-
 int main()
 {
-    int t,no,temp;
-    string s;
+    int t,arr[51],h;
     cin>>t;
     while(t>0)
     {
-         cin>>s;
-         no=s.length();
-         int arr[no];
-        for(int i=0;i<no;i++)
+        h=0;
+		int l=0,i=0,f=0;
+		char temp=' ';
+   		while(temp==32)
         {
-          arr[i]=s[i];
-        }
-        temp=arr[0];
-        for(int i=0;i<no;i++)
+        	cin>>arr[i];
+        	cin>>temp;
+            i++;
+          }
+        for(int i=0;i<5;i++)
         {
-            if(arr[i]==no-1)
-            {
-              arr[0]=no-1;
-              arr[i]=temp;
-            }
+            cout<<arr[i]<<endl;;
         }
-         sort(&arr[1],&arr[no]);
-        cout<<arr[no-1]<<endl;
-        t--;
+		t--;
     }
+    return 0;
 }
